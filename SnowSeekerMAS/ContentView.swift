@@ -7,27 +7,49 @@
 
 import SwiftUI
 
+extension View {
+    @ViewBuilder func phoneOnlyNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            self.navigationViewStyle(.stack)
+        } else {
+            self
+        }
+    }
+}
 
 struct ContentView: View {
-    @State private var searchText = ""
-    let allNames = ["Subh", "Vina", "Melvin", "Stefanie"]
+    let resorts: [Resort] = Bundle.main.decode("resorts.json")
+    
     
     var body: some View {
         NavigationView {
-            List(filteredNames, id: \.self) { name in
-                Text(name)
+            List(resorts) { resort in
+                NavigationLink {
+                    Text(resort.name)
+                } label: {
+                    Image(resort.country)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 25)
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(.gray, lineWidth: 1)
+                        )
+                    
+                    VStack(alignment: .leading){
+                        Text(resort.name)
+                            .font(.headline)
+                        Text("\(resort.runs) runs")
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
-            .searchable(text: $searchText, prompt: "Look for something")
-            .navigationTitle("Searching")
+            .navigationTitle("Resorts")
+            
+            WelcomeView()
         }
-    }
-    
-    var filteredNames: [String] {
-        if searchText.isEmpty {
-            return allNames
-        } else {
-            return allNames.filter { $0.localizedCaseInsensitiveContains(searchText)}
-        }
+        .phoneOnlyNavigationView()
     }
 }
 

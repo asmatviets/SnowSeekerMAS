@@ -11,6 +11,10 @@
 		1AFAC0F629C2DCBA0005E159 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAC0F529C2DCBA0005E159 /* ContentView.swift */; };
 		1AFAC0F829C2DCBC0005E159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAC0F729C2DCBC0005E159 /* Assets.xcassets */; };
 		1AFAC0FB29C2DCBC0005E159 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAC0FA29C2DCBC0005E159 /* Preview Assets.xcassets */; };
+		1AFAC10229C2F9260005E159 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAC10129C2F9250005E159 /* resorts.json */; };
+		1AFAC10429C2FA370005E159 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAC10329C2FA370005E159 /* Resort.swift */; };
+		1AFAC10629C2FB360005E159 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAC10529C2FB360005E159 /* Bundle-Decodable.swift */; };
+		1AFAC10829C304610005E159 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAC10729C304610005E159 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		1AFAC0F529C2DCBA0005E159 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1AFAC0F729C2DCBC0005E159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AFAC0FA29C2DCBC0005E159 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1AFAC10129C2F9250005E159 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		1AFAC10329C2FA370005E159 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		1AFAC10529C2FB360005E159 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		1AFAC10729C304610005E159 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				1AFAC0F329C2DCBA0005E159 /* SnowSeekerMASApp.swift */,
 				1AFAC0F529C2DCBA0005E159 /* ContentView.swift */,
+				1AFAC10729C304610005E159 /* WelcomeView.swift */,
+				1AFAC10329C2FA370005E159 /* Resort.swift */,
+				1AFAC10529C2FB360005E159 /* Bundle-Decodable.swift */,
+				1AFAC10129C2F9250005E159 /* resorts.json */,
 				1AFAC0F729C2DCBC0005E159 /* Assets.xcassets */,
 				1AFAC0F929C2DCBC0005E159 /* Preview Content */,
 			);
@@ -125,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFAC10229C2F9260005E159 /* resorts.json in Resources */,
 				1AFAC0FB29C2DCBC0005E159 /* Preview Assets.xcassets in Resources */,
 				1AFAC0F829C2DCBC0005E159 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFAC10829C304610005E159 /* WelcomeView.swift in Sources */,
 				1AFAC0F629C2DCBA0005E159 /* ContentView.swift in Sources */,
+				1AFAC10429C2FA370005E159 /* Resort.swift in Sources */,
 				1AFAC0F429C2DCBA0005E159 /* SnowSeekerMASApp.swift in Sources */,
+				1AFAC10629C2FB360005E159 /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
