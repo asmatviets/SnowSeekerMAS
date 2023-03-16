@@ -7,20 +7,22 @@
 
 import SwiftUI
 
+struct User: Identifiable {
+    var id = "Taylor Swift"
+}
+
 struct ContentView: View {
+    @State private var selectedUser: User? = nil
+    
     var body: some View {
-        NavigationView {
-            NavigationLink {
-                Text("New Secondary")
-            } label: {
-                Text("Hello world")
+        Text("Hello world")
+            .onTapGesture {
+                selectedUser = User()
             }
-                .navigationTitle("Primary")
-            
-            Text("Secondary")
-            
-            Text("Tertiary")
-        }
+            .sheet(item: $selectedUser) { user in
+                Text(user.id)
+            }
+
     }
 }
 
