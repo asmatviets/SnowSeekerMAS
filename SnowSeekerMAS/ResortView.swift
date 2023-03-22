@@ -27,10 +27,9 @@ struct ResortView: View {
                         .scaledToFit()
                     Text(resort.imageCredit)
                         .font(.caption)
-                        .padding(8)
+                        .padding(10)
                         .foregroundColor(.white)
                         .background(.black.opacity(0.6))
-                        .clipShape(Capsule())
                         .offset(x: -5, y: -5)
                         
                 }
